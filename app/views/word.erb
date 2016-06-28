@@ -1,0 +1,19 @@
+<h1>Find Anagrams!</h1>
+
+<% if @new_word %>
+  <p>Estos son anagramas para '<%= @new_word %>':</p>
+  <p># Aqui deberás enlistar todos los anagramas</p>
+  <p><% @words.each do |word|%> 
+    '<%= word.word %>'
+    <% end %></p>
+<% end %>
+
+<%= erb :mypartial, :layout => false %>
+<!-- <form action="/new_word" method="post">
+  User Input:<br>
+  <input type="text" name="user_word"><br>
+  <input type="submit" value="Submit">
+</form>
+
+ -->
+
